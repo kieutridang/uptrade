@@ -1,0 +1,26 @@
+{
+  "docs": {
+    "General": ["introduction"],
+    "Web": [
+      {
+        "type": "subcategory",
+        "label": "Settings",
+        "ids": ["company-setting"]
+      },
+      "web-chat-detail"
+    ],
+    "Mobile": [
+      "login",
+      "authentication",
+      "product-list-menu",
+      "new-edit-product",
+      "moodboard",
+      "new-feature-chat",
+      "new-menu-events",
+      "settings"
+    ]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}

@@ -1,0 +1,128 @@
+@import '../../styles/variables.scss';
+@import '../../styles/vendors/material-components/theme/_color-palette';
+
+.slide-bar {
+  transition: transform 0.5s ease;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  right: 0;
+  background-color: $white;
+  max-width: 400px;
+  padding: 15px 45px;
+  box-shadow: 3px 0 15px -4px rgba(148, 148, 148, 0.8);
+  overflow-y: auto;
+  .slide-bar-close-icon {
+    position: absolute;
+    color: $blue;
+    right: 10px;
+    top: 10px;
+    padding: 7px;
+    width: auto;
+    z-index: 10;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  .slide-bar-header {
+    p {
+      margin-bottom: 3px;
+    }
+  }
+  .slide-bar-switch {
+    .iconChecked {
+      color: #66bb6a;
+    }
+    .root {
+      > span:nth-child(2) {
+        background-color: #66bb6a;
+      }
+    }
+    .MuiSwitch-colorSecondary-181.MuiSwitch-checked-179 + .MuiSwitch-bar-183 {
+      background-color: #66bb6a;
+    }
+    .MuiSwitch-colorSecondary-181.MuiSwitch-checked-179 {
+      color: #66bb6a;
+    }
+  }
+  .slide-bar-select {
+    .MuiFormLabel-root-102.MuiFormLabel-focused-103 {
+      color: $material-color-cyan-700;
+    }
+    // .MuiInput-underline-23 {
+    //   &:after {
+    //     border-bottom-color: $material-color-cyan-700;
+    //   }
+    // }
+  }
+  .side-bar-textarea {
+    .MuiFormLabel-root-102.MuiFormLabel-focused-103 {
+      color: $material-color-cyan-700;
+    }
+    // .MuiInput-underline-23 {
+    //   &:after {
+    //     border-bottom-color: $material-color-cyan-700;
+    //   }
+    // }
+  }
+  .side-bar-input {
+    .MuiFormLabel-root-102.MuiFormLabel-focused-103 {
+      color: $material-color-cyan-700;
+    }
+    // .MuiInput-underline-23 {
+    //   &:after {
+    //     border-bottom-color: $material-color-cyan-700;
+    //   }
+    // }
+  }
+  .slide-bar-chips {
+    .slide-bar-chip {
+      background: $third;
+      color: $white;
+      margin: 0 5px 5px 0;
+      // &:focus {
+      //   background: #bdbdbd;
+      // }
+    }
+    .MuiChip-deleteIcon-204 {
+      color: rgba(0, 0, 0, 0.26);
+      &:hover {
+      color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  .btn-start-chat {
+    background-color: #00bcd4;
+    font-size: 13px;
+    &:hover {
+      background-color:	#4394A8;
+    }
+  }
+}
+
+.slide-bar-close {
+  transform: translateX(400px);
+}
+.slide-bar-open {
+  transform: translateX(0);
+}
+
+.slide-bar-open-icon {
+  position: fixed;
+  top: 25%;
+  width: 54px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  color: white;
+  background-color: $blue;
+  right: 0;
+  transition: transform 0.5s ease;
+}
+
+.slide-bar-open-icon-close {
+  transform: translateX(0);
+}
+.slide-bar-open-icon-open {
+  transform: translateX(-400px);
+}

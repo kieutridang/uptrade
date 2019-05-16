@@ -1,0 +1,13 @@
+.error-container {
+  margin-top: 100px;
+  text-align: center;
+  .text-500 {
+    font-size: 160px;
+  }
+  .btn-go-back {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+

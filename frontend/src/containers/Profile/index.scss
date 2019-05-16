@@ -1,0 +1,25 @@
+@import '../../styles/vendors/material-components/theme/_color-palette.scss';
+
+.company-logo {
+  max-width: 210px;
+  margin-top: 100px;
+}
+.inbox-title {
+  text-align: left;
+  color: #86c2cc;
+  font-size: 14px;
+  margin-bottom: -2px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.image-show {
+  .company-logo {
+    margin-top: 50px;
+  }
+  margin-bottom: 20px;
+}
+.client-item-sub {
+  width: 100%
+}

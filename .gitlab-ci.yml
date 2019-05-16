@@ -1,0 +1,111 @@
+stages:
+  - build
+  - deploy
+  # - prepare_test
+  # - test
+
+variables:
+  CURR_TAG: ${CI_COMMIT_SHA}
+  SERVER_IP: 13.76.229.54
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .npm
+    - cache/Cypress
+    - node_modules
+
+build_demo:
+  stage: build
+  variables:
+    SERVICE_NAME: uptrade-demo
+  script:
+    - docker login -u duybui -p Chethetde123
+    - docker build -t duybui/uptrade:demo-${CURR_TAG} --build-arg NODE_ENV=qa --build-arg REACT_APP_BACKEND_URL=https://demo.uptrade.co .
+    - docker push duybui/uptrade:demo-${CURR_TAG}
+    - echo duybui/uptrade:demo-${CURR_TAG}
+    - echo "TO RUN THIS IMAGE IN A DOCKER SWARM"
+    - echo "docker service create --name ${SERVICE_NAME} --label 'traefik.port=4000' --label traefik.frontend.rule="Host:demo.uptrade.co" --network traefik-net duybui/uptrade:demo-${CURR_TAG}"
+  only:
+    - develop
+    - ci-cd-e2e
+
+build_prod:
+  stage: build
+  variables:
+    SERVICE_NAME: uptrade-prod
+  script:
+    - docker login -u duybui -p Chethetde123
+    - docker build -t duybui/uptrade:prod-${CURR_TAG} --build-arg NODE_ENV=prod --build-arg REACT_APP_BACKEND_URL=https://app.uptrade.co .
+    - docker push duybui/uptrade:prod-${CURR_TAG}
+    - echo duybui/uptrade:prod-${CURR_TAG}
+    - echo "TO RUN THIS IMAGE IN A DOCKER SWARM"
+    - echo "docker service create --name ${SERVICE_NAME} --label 'traefik.port=4000' --label traefik.frontend.rule="Host:app.uptrade.co" --network traefik-net duybui/uptrade:prod-${CURR_TAG}"
+  only:
+    - master
+
+deploy_demo:
+  stage: deploy
+  variables:
+    SERVICE_NAME: uptrade-demo
+  script:
+    - docker service update --image duybui/uptrade:demo-${CURR_TAG} ${SERVICE_NAME}
+  only:
+    - develop
+    - ci-cd-e2e
+
+deploy_prod:
+  stage: deploy
+  variables:
+    SERVICE_NAME: uptrade-prod
+  script:
+    - docker service update --image duybui/uptrade:prod-${CURR_TAG} ${SERVICE_NAME}
+  only:
+    - master
+
+# install_test:
+#   image: cypress/base:10
+#   stage: prepare_test
+#   script:
+#     - npm ci
+#     - npm run cy:verify
+#   only:
+#     - develop
+#     - ci-cd-e2e
+
+# do_test:
+#   image: cypress/base:10
+#   stage: test
+#   script:
+#     - npm run cypress:run
+#   only:
+#     - develop
+#     - ci-cd-e2e
+
+# all jobs that actually run tests can use the same definition
+# .job_template: &job
+#   image: cypress/base:10
+#   stage: test
+#   script:
+#     # print CI environment variables for reference
+#     # - $(npm bin)/print-env CI
+#     # run Cypress test in load balancing mode, pass id to tie jobs together
+#     # - npm run cypress:run -- --parallel --ci-build-id $CI_PIPELINE_ID --group electrons
+#     - npm run cypress:run
+#   only:
+#     - develop
+#     - ci-cd-e2e
+# actual job definitions
+# all steps are the same, they come from the template above
+# electrons-1:
+#   <<: *job
+# electrons-2:
+#   <<: *job
+# electrons-3:
+#   <<: *job
+# electrons-4:
+#   <<: *job
+# electrons-5:
+#   <<: *job

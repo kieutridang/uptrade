@@ -1,0 +1,37 @@
+@import '../../../../styles/vendors/material-components/theme/_color-palette';
+
+.company-logo {
+  max-width: 210px;
+}
+.inbox-title {
+  text-align: left;
+  color: #86c2cc;
+  font-size: 14px;
+  margin-bottom: -2px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.MuiButtonBase-root-62.MuiIconButton-root-117 {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+// .MuiInput-underline-23.MuiInput-disabled-22:before {
+//   border-bottom: 1px solid rgba(0, 0, 0, 0.42) !important;
+// }
+
+// .MuiSelect-root-147  {
+//   text-align: left;
+// }
+// .MuiInput-underline-23:after {
+//   border-bottom: 2px solid $material-color-cyan-700 !important;
+// }
+// .MuiFormLabel-root-140.MuiFormLabel-focused-141 {
+//   color: $material-color-cyan-700 !important;
+// }
+// .MuiCheckbox-colorSecondary-165.MuiCheckbox-checked-161 {
+//   color: #66bb6a !important;
+// }

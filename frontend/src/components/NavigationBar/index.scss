@@ -1,0 +1,132 @@
+@import '../../styles/_variables.scss';
+
+.nav_bar {
+  background-color: $primary;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.nav_bar_left {
+  .list-icon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    .nav_bar_logo {
+      width: 41px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .nav_bar_logo_text {
+      width: 101px;
+      height: 30px;
+    }
+    .nav_bar_button {
+      border-radius: 0;
+      color: $white;
+      height: 60px;
+      width: 58px;
+    }
+    .list_inline {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      margin-left: 49px;
+      li {
+        display: inline;
+      }
+    }
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+.nav_bar_right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .nav_bar_button {
+    border-radius: 0;
+    color: $white;
+    height: 60px;
+    width: 58px;
+  }
+  .nav_bar_search {
+    color: $white;
+    &:before {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "\00a0";
+      position: absolute;
+      transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-bottom: none;
+    }
+    &:after {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "\00a0";
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+      border-bottom: 0.8px solid $white;
+    }
+  }
+  // .MuiInput-underline-23 {
+  //   &:hover:before {
+  //     display: none
+  //   }
+  // }
+}
+.nav_bar_profile{
+  .nav_bar_profile_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav_bar_profile_item {
+    min-width: 150px;
+    font-size: 0.875rem;
+    span {
+      margin-left: 10px;
+    }
+    svg {
+      font-size: 1rem;
+    }
+    a {
+      color: $black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .nav_bar {
+    position: relative;
+  }
+  .nav_bar_left {
+    .list-icon {
+      display: none;
+    }
+    .menu-icon {
+      display: block;
+      svg {
+        font-size: 35px;
+      }
+    }
+  }
+}

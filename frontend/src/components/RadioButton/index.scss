@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.radio_button {
+  &--primary {
+    color: $primary !important;
+  }
+  &--secondary {
+    color: $secondary !important;
+  }
+  &--green {
+    color: $green-radio-button !important;
+  }
+}
+.radio_label {
+  margin: 0 !important;
+}

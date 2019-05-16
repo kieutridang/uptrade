@@ -1,0 +1,177 @@
+/* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+body{font-family:'Open Sans', sans-serif; }
+
+/*titles*/
+h2, .chapter .article-title{color:#383838; font-size: 20px; font-weight: 600; letter-spacing: 0.5px}
+h2::after{
+    content:' ';
+    display:block;
+    border:0.5px solid #dcdcdc;
+}
+.box-header {letter-spacing: 0.5px}
+/*bar*/
+.buttons-row button{margin: 0px 10px 0 0;text-transform: none; font-size:12px;    padding: 4px 4px;}
+.buttons-row button .material-icons{margin-right: 5px; }
+.greenicon svg{color:#00b9ae !important}
+/* LAYOUT */
+/*login*/
+.logback{
+background: #43cea2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.logologin{max-width: 100%}
+/*general*/
+.nopadding{padding:0}
+.mdl-data-table{font-size: 0.875em}
+.fullWidth{width: 100%}
+/*left container*/
+.utlogo{height:30px; width: 41px}
+.utbranding{width: 101px; margin-top: -5px; margin-left: -10px;}
+  .nav-collapsed .utlogo{margin-left: -7px}
+.app-sidebar .sidebar-content .nav > li > a .nav-icon{margin-right: 10px}
+/*right container */
+.app-page-container .app-content-wrapper{background-color: #ffffff}
+
+/*tables*/
+.master thead{background:#DB5461 }
+.master thead tr th{color:white !important; height: 38px}
+.master thead tr{height: 40px !important}
+.fulltable{width: 100%; margin-top:20px}
+.condensedtable{border-top: 0;border-bottom: 0; border-left: 0; border-right: 0}
+.condensedtable th{font-weight: normal; color:black; opacity:1}
+.condensedtable th, .condensedtable td{padding: 0px 20px !important; height: 20px !important; text-align: center; font-size: 14px}
+.condensedtable tr{height: 20px !important}
+/*Box action*/
+.headericons svg{color:#777777}
+.headericons{margin-right: 15px}
+/*elements*/
+.searchbar{padding: 1rem 0px 1.5rem 0px;}
+/*scrollbar*/
+::-webkit-scrollbar {width: 10px;height: 10px}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 0px grey;border-radius: 10px;}
+::-webkit-scrollbar-thumb {background: #bdbdbd;opacity: 0.4; border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: #7ab3bc;}
+
+/*chat inbox*/
+li.chatentry{border-bottom: 1px solid #ebebeb;}
+.chatentry:hover {background-color: rgba(0, 0, 0, 0.08)}
+
+
+.divider-red{border-color: #DB5461!important}
+.button-row{padding: 20px 0}
+a.customizer-close{background-color: inherit!important;color: #DB5461!important}
+.tableproducts img{max-width: 70px; max-height: 70px}
+.EnhancedTableToolbar-actions-215 {min-width: 320px}
+
+.tablesearch{height: 40px}
+.tablesearch i{color: #86C2CC}
+.article-notitle {margin-top: 20px;}
+.products .box-header {font-weight: bold}
+.products .item-card.card__horizontal .card__desc{margin: 0;}
+.products .item-card.card__horizontal h5{
+font-size: 14px;
+margin: 20px 0 5px 0;}
+.products .products-img-upload {
+  height: 250px;
+  &.productions {
+    height: 272px;
+  }
+}
+.products .images-upload-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.big {
+    height: 100%;
+  }
+}
+.no-padding{padding: 0px}
+ul.headericons {margin-top:-12px; }
+.closebox .article{padding-bottom: 0px !important}
+.closebox .box {margin-bottom: 0.5rem}
+.inboxtitle {color:#86c2cc; padding: 0 20px; font-size: 14px; margin-bottom: -2px;}
+.titlerow {width: 100%}
+.98width {width: 98% !important}
+.longinputs textarea{font-size: 12px}
+.totaltable{background-color: rgba(0, 0, 0, 0.08)}
+.nopaddingleft{padding-left: 0}
+.nopaddingright{padding-right: 0}
+.turquoise{color:#86C2CC}
+.box-header {font-weight: bold}
+.productsheet{padding-top: 20px}
+.productsheet input, .productsheet select, .productsheet textarea, .productsheet, .productsheet label, .productsheet MenuItem, .productsheet option{font-size:14px}
+.fullform {width: 100% !important}
+.inline{background:transparent; width: 20%; margin-top: 1.25rem; align-items: center;}
+.currencyfield{width: 140px}
+.checklabel {padding-top:20px}
+.companylogo{max-width: 210px}
+.infobody {font-size:90%}
+.avatar{border-radius: 50%; max-width: 150px}
+.usercard{border-bottom: 1px solid #ebebeb;}
+.box-header i{margin:0 5px}
+.doubleinlineinput {width: 46.8% !important}
+.bold{font-weight: bold;}
+.tablestyle {padding: 10px 0}
+.tablestylein{padding: 5px 0}
+.tablestyle p{padding-top: 14px;}
+.userback{padding:20px;
+  background: url(/assets/images-demo/background/3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+background-size: cover;
+}
+.white{color:white}
+.smallcheck {max-height: 20px !important}
+.smallerlist span{font-size: 0.9375rem}
+.smallericons svg{font-size: 14px; color:grey}
+.titlerow .box-header{width: 100%}
+
+.testclass{font-size: 0.875rem}
+
+.left-section{box-shadow: 3px 0 15px -4px rgba(148, 148, 148, 0.8),}
+.supname{font-size: 80%; font-weight: normal}
+.redtheme{color:#DB5461}
+.inlineicon{padding: 0 10px}
+.cardright{margin: 10px 20px 10px 0}
+.cardtitle{color:#5a5656 !important; font-size: 18px !important}
+.cardp{font-size: 12px !important}
+
+svg.checkicon {color:#00B9AE}
+.iconcard svg{height: 1rem}
+
+/*product card link*/
+a.buyer{
+background-color: #db5461;
+padding: 2px 5px;
+border-radius: 4px;
+color: white !important;
+font-size: 70%}
+
+/*Card product sheet alternate*/
+.imgcard_alt{width: 33% !important; max-height: 140px}
+.bodycard_alt{width: 66% !important; padding:10px !important}
+.bodycard_alt p{font-size: 90%}
+
+/*timeline history*/
+.history {font-size: 80%}
+.history h4 {font-size: 13px !important; font-weight: bold}
+.tl-time{font-weight: bold}
+.history p{margin-bottom: 0}
+.ui-timeline .tl-item .tl-body .tl-content{padding: 5px}
+
+/*sourcing accordion menu*/
+.companyAvatar{max-height: 40px; padding-right: 20px}
+.user-avatar{max-height: 40px}
+.accordiondetail{border-top:1px solid #e5e5e5;}
+
+/*events*/
+.no-sash{visibility: hidden}
+.cardtitle a {color:#5a5656;}
+.cardtitle a:hover{text-decoration: none}
+
+
+/*customer list*/
+.multiple-line-cell { white-space: pre-wrap }

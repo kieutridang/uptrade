@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Uptrade",
+    "description": "Uptrade",
+    "slug": "UpTrade",
+    "privacy": "unlisted",
+    "sdkVersion": "31.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "scheme": "uptrade",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/uptrade-splash-static.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.kafudigital.uptrade",
+      "icon": "assets/images/icon.png",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "uptrade."
+      }
+    },
+    "android": {
+      "icon": "assets/images/icon.png",
+      "package": "com.kafudigital.uptrade",
+      "versionCode": 1
+    }
+  }
+}
